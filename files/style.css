@@ -1906,10 +1906,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Success message styling */
 #popup-message.success {
-  background-color: var(--eerie-black-2); /* Black background for success */
+  background-color: var(--eerie-black-1); /* Black background for success */
 }
 
 /* Error message styling */
 #popup-message.error {
-  background-color: var(--eerie-black-2); /* Black background for error */
+  background-color: var(--eerie-black-1); /* Black background for error */
 }
