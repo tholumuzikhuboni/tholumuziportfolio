@@ -126,7 +126,7 @@ var form = document.getElementById("my-form");
 
 async function handleSubmit(event) {
   event.preventDefault();
-  var popup = document.getElementById("popup-message");
+  var status = document.getElementById("my-form-status");
   var data = new FormData(event.target);
 
   fetch(event.target.action, {
@@ -137,45 +137,35 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      popup.innerHTML = "Hooray! Email sent!";
-      popup.classList.add("success");
-      popup.classList.remove("error");
+      status.innerHTML = "Hooray! Email Sent!";
+      status.classList.add("success"); // Apply success style
       form.reset();
     } else {
       response.json().then(data => {
         if (Object.hasOwn(data, 'errors')) {
-          popup.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+          status.innerHTML = data["errors"].map(error => error["message"]).join(", ");
         } else {
-          popup.innerHTML = "Oops! Email not send";
+          status.innerHTML = "Oops! Email not sent!";
         }
-        popup.classList.add("error");
-        popup.classList.remove("success");
+        status.classList.add("error"); // Apply error style
       });
     }
-    showPopup(); // Show the popup
+    setTimeout(() => {
+      status.innerHTML = ""; // Clear message after 5 seconds
+      status.classList.remove("success", "error"); // Remove styles
+    }, 5000); // 5000 milliseconds = 5 seconds
   }).catch(error => {
-    popup.innerHTML = "Oops! Email not senf";
-    popup.classList.add("error");
-    popup.classList.remove("success");
+    status.innerHTML = "Oops! There was a problem submitting your form";
+    status.classList.add("error"); // Apply error style
 
-    showPopup(); // Show the popup
+    setTimeout(() => {
+      status.innerHTML = ""; // Clear message after 5 seconds
+      status.classList.remove("success", "error"); // Remove styles
+    }, 5000);
   });
 }
 
 form.addEventListener("submit", handleSubmit);
-
-function showPopup() {
-  var popup = document.getElementById("popup-message");
-  popup.style.display = "block";
-  popup.style.opacity = "1";
-
-  setTimeout(() => {
-    popup.style.opacity = "0"; // Fade out
-    setTimeout(() => {
-      popup.style.display = "none"; // Hide after fade out
-    }, 500); // Match this to the CSS transition duration
-  }, 3000); // Display for 3 seconds before starting fade out
-}
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
