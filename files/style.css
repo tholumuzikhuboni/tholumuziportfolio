@@ -1889,9 +1889,9 @@ textarea.form-input::-webkit-resizer { display: none; }
 #popup-message {
   display: none; /* Hidden by default */
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+bottom: 0; /* Set to 0 to align with the bottom of the viewport */
+left: 50%; /* Center it horizontally */
+transform: translateX(-50%); /* Adjust to center based on its width */
   min-width: 300px;
   padding: 20px;
   text-align: center;
@@ -1906,10 +1906,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Success message styling */
 #popup-message.success {
-  background-color: var(--eerie-black-1); /* Black background for success */
+  background-color: var(--smoky-black); /* Black background for success */
 }
 
 /* Error message styling */
 #popup-message.error {
-  background-color: var(--eerie-black-1); /* Black background for error */
+  background-color: var(--smoky-black); /* Black background for error */
 }
