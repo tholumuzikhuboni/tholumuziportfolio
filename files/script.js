@@ -120,20 +120,31 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 }
 
-// Draft Email
+// Contact Form
 
-function openEmailClient() {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+  document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
 
-    const subject = encodeURIComponent(`Contact Form Submission from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const form = event.target;
+    const formData = new FormData(form);
 
-    const mailtoLink = `mailto: contact@tholumuzi.co.za?subject=${subject}&body=${body}`;
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
 
-    window.location.href = mailtoLink;
-}
+      if (response.ok) {
+        document.getElementById('success-message').style.display = 'block';
+        form.reset(); // Optional: Clear the form fields after submission
+      } else {
+        alert('Oops! There was a problem submitting your form');
+      }
+    } catch (error) {
+      alert('Oops! There was a problem submitting your form');
+    }
+  });
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
