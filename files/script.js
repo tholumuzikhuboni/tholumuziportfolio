@@ -122,7 +122,60 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 // Contact Form
 
-  var form = document.getElementById("my-form");async function handleSubmit(event) {event.preventDefault();var status = document.getElementById("my-form-status");var data = new FormData(event.target);fetch(event.target.action, {  method: form.method,  body: data,  headers: {    'Accept': 'application/json'}}).then(response => {  if (response.ok) {    status.innerHTML = "Thanks for your submission!";    form.reset()  } else {    response.json().then(data => {    if (Object.hasOwn(data, 'errors')) {      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")    } else {      status.innerHTML = "Oops! There was a problem submitting your form"    }  })}}).catch(error => {  status.innerHTML = "Oops! There was a problem submitting your form"});}form.addEventListener("submit", handleSubmit)
+var form = document.getElementById("my-form");
+
+async function handleSubmit(event) {
+  event.preventDefault();
+  var popup = document.getElementById("popup-message");
+  var data = new FormData(event.target);
+
+  fetch(event.target.action, {
+    method: form.method,
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  }).then(response => {
+    if (response.ok) {
+      popup.innerHTML = "Thanks for your submission!";
+      popup.classList.add("success");
+      popup.classList.remove("error");
+      form.reset();
+    } else {
+      response.json().then(data => {
+        if (Object.hasOwn(data, 'errors')) {
+          popup.innerHTML = data["errors"].map(error => error["message"]).join(", ");
+        } else {
+          popup.innerHTML = "Oops! There was a problem submitting your form";
+        }
+        popup.classList.add("error");
+        popup.classList.remove("success");
+      });
+    }
+    showPopup(); // Show the popup
+  }).catch(error => {
+    popup.innerHTML = "Oops! There was a problem submitting your form";
+    popup.classList.add("error");
+    popup.classList.remove("success");
+
+    showPopup(); // Show the popup
+  });
+}
+
+form.addEventListener("submit", handleSubmit);
+
+function showPopup() {
+  var popup = document.getElementById("popup-message");
+  popup.style.display = "block";
+  popup.style.opacity = "1";
+
+  setTimeout(() => {
+    popup.style.opacity = "0"; // Fade out
+    setTimeout(() => {
+      popup.style.display = "none"; // Hide after fade out
+    }, 500); // Match this to the CSS transition duration
+  }, 3000); // Display for 3 seconds before starting fade out
+}
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
