@@ -122,29 +122,7 @@ for (let i = 0; i < filterBtn.length; i++) {
 
 // Contact Form
 
-  document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault();
-
-    const form = event.target;
-    const formData = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        document.getElementById('success-message').style.display = 'block';
-        form.reset(); // Optional: Clear the form fields after submission
-      } else {
-        alert('Oops! There was a problem submitting your form');
-      }
-    } catch (error) {
-      alert('Oops! There was a problem submitting your form');
-    }
-  });
+  var form = document.getElementById("my-form");async function handleSubmit(event) {event.preventDefault();var status = document.getElementById("my-form-status");var data = new FormData(event.target);fetch(event.target.action, {  method: form.method,  body: data,  headers: {    'Accept': 'application/json'}}).then(response => {  if (response.ok) {    status.innerHTML = "Thanks for your submission!";    form.reset()  } else {    response.json().then(data => {    if (Object.hasOwn(data, 'errors')) {      status.innerHTML = data["errors"].map(error => error["message"]).join(", ")    } else {      status.innerHTML = "Oops! There was a problem submitting your form"    }  })}}).catch(error => {  status.innerHTML = "Oops! There was a problem submitting your form"});}form.addEventListener("submit", handleSubmit)
 
 // page navigation variables
 const navigationLinks = document.querySelectorAll("[data-nav-link]");
