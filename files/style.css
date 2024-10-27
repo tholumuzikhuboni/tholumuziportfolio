@@ -1896,7 +1896,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   padding: 20px;
   text-align: center;
   font-size: 1rem;
-  color: #fff;
+  color: var(--orange-yellow-crayola);
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 10px;
   z-index: 1000;
@@ -1906,10 +1906,10 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Success message styling */
 #popup-message.success {
-  background-color: var(--orange-yellow-crayola); /* Orange yellow background for success */
+  background-color: var(--smoky-black); /* Black background for success */
 }
 
 /* Error message styling */
 #popup-message.error {
-  background-color: #dc3545; /* Red background for error */
+  background-color: var(--smoky-black); /* Black background for error */
 }
