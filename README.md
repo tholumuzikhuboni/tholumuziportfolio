@@ -2,44 +2,49 @@
 ## Preview
 
 ![Tholumuzi Khuboni](./images/portfolio-preview.png)
-Welcome to my personal portfolio website! This site showcases my skills, projects, and experience as a Full Stack Developer. I built it using HTML, CSS, and JavaScript.
+Welcome to my personal portfolio website! Here, you can explore my journey as a **Front-End Developer** and **Cybersecurity Analyst**. This website serves as a showcase of my projects, skills, and experience, blending the worlds of web development and digital security.
 
-## Website URL
+**Website URL**: [tholumuzi.co.za](https://tholumuzi.co.za)
 
-[tholumuzi.co.za](https://tholumuzi.co.za)
+## Overview
+
+My portfolio is designed to present my skills, qualifications, and project achievements in front-end development and cybersecurity. The site highlights my work in crafting dynamic, responsive, and secure applications that provide seamless user experiences while upholding robust security standards.
 
 ## Features
 
-- **Responsive Design**: The site is fully responsive, ensuring an optimal viewing experience across a wide range of devices, from desktops to mobile phones.
-- **About Me Section**: Learn more about me, my background, and my passion for development.
-- **Projects Showcase**: A display of my favorite projects, including code samples and live demos.
-- **Contact Form**: A simple form to reach out to me directly from the website.
-- **Social Media Links**: Easily connect with me through my social media profiles.
+- **About Me**: Learn about my background, professional journey, and expertise.
+- **Projects**: Explore some of the projects I've completed, demonstrating my experience with HTML, CSS, JavaScript, and cybersecurity best practices.
+- **Skills**: View my technical skills across web development and cybersecurity, including tools, programming languages, and technologies I use.
+- **Contact Information**: Find ways to get in touch with me for potential collaborations, opportunities, or networking.
 
-## Tech Stack
+## Technologies Used
 
-- **HTML5**: Structuring the content of the website.
-- **CSS3**: Styling the website and ensuring a responsive design.
-- **JavaScript**: Adding interactivity to the site, including smooth scrolls, form validation, and dynamic content display.
+- **Front-End**: HTML, CSS, JavaScript
+- **Back-End / Cybersecurity**: Knowledge and principles of web security, data protection, and secure coding practices
+- **Frameworks and Tools**: Various libraries and frameworks enhancing both front-end interactivity and security robustness
+
+## Key Sections
+
+- **About**: A summary of who I am as a developer and cybersecurity professional, detailing my passion for creating user-centric and secure applications.
+- **Projects**: A display of selected projects that showcase my technical skills and practical experience. Each project emphasizes either my front-end development abilities or my cybersecurity insights.
+- **Certifications**: A section dedicated to my certifications, including achievements in front-end development and cybersecurity.
 
 ## How to Use
 
-1. Visit the website: [tholumuzi.co.za](https://tholumuzi.co.za)
-2. Browse through the sections to learn more about my work and experience.
-3. Use the contact form to send a message or connect via social media.
+Visit the portfolio to:
 
-## Future Enhancements
-
-- Adding a blog section to share my thoughts on technology and development.
-- Implementing dark mode for a better user experience.
-- Further improving the performance and SEO.
-
-## License
-
-This project is open source. You can use it freely, but credit is appreciated.
+- Discover examples of my work in web development and cybersecurity.
+- Get an understanding of my technical expertise and the value I bring to both fields.
+- Connect with me for future opportunities.
 
 ## Contact
 
-Feel free to connect with me via the following platforms:
+Feel free to reach out for collaboration or inquiries:
 
-- GitHub: [/tholumuzikhuboni](https://github.com/tholumuzikhuboni)
+- [Instagram](https://www.instagram.com/tholumuzikhuboni)
+- [Twitter](https://www.twitter.com/khubonimuzi)
+- Email: [contact@tholumuzi.co.za](mailto:tholumuzi@tholumuzi.co.za)
+
+---
+
+Thank you for visiting my portfolio! I look forward to connecting and exploring opportunities together.
