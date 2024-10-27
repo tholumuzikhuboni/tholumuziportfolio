@@ -1885,3 +1885,31 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
+/* Popup styling */
+#popup-message {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1rem;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 10px;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+/* Success message styling */
+#popup-message.success {
+  background-color: var(--orange-yellow-crayola); /* Orange yellow background for success */
+}
+
+/* Error message styling */
+#popup-message.error {
+  background-color: #dc3545; /* Red background for error */
+}
