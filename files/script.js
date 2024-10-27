@@ -137,7 +137,7 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      popup.innerHTML = "Thanks for your submission!";
+      popup.innerHTML = "Hooray! Email sent!";
       popup.classList.add("success");
       popup.classList.remove("error");
       form.reset();
@@ -146,7 +146,7 @@ async function handleSubmit(event) {
         if (Object.hasOwn(data, 'errors')) {
           popup.innerHTML = data["errors"].map(error => error["message"]).join(", ");
         } else {
-          popup.innerHTML = "Oops! There was a problem submitting your form";
+          popup.innerHTML = "Oops! Email not send";
         }
         popup.classList.add("error");
         popup.classList.remove("success");
@@ -154,7 +154,7 @@ async function handleSubmit(event) {
     }
     showPopup(); // Show the popup
   }).catch(error => {
-    popup.innerHTML = "Oops! There was a problem submitting your form";
+    popup.innerHTML = "Oops! Email not senf";
     popup.classList.add("error");
     popup.classList.remove("success");
 
