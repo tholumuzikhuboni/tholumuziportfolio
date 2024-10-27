@@ -1,7 +1,7 @@
 # Tholumuzi Portfolio
 ## Preview
 
-![Tholumuzi Khuboni](./images/tholumuzi-portfolio.png)
+![Tholumuzi Khuboni](./images/portfolio-preview.png)
 Welcome to my personal portfolio website! This site showcases my skills, projects, and experience as a Full Stack Developer. I built it using HTML, CSS, and JavaScript.
 
 ## Website URL
