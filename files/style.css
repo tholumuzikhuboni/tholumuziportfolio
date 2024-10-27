@@ -1885,31 +1885,24 @@ textarea.form-input::-webkit-resizer { display: none; }
   .timeline-text { max-width: 700px; }
 
 }
-/* Popup styling */
-#popup-message {
-  display: none; /* Hidden by default */
-  position: fixed;
-bottom: 0; /* Set to 0 to align with the bottom of the viewport */
-left: 50%; /* Center it horizontally */
-transform: translateX(-50%); /* Adjust to center based on its width */
-  min-width: 300px;
-  padding: 20px;
+#my-form-status {
+  display: block;
   text-align: center;
   font-size: 1rem;
-  color: var(--orange-yellow-crayola);
-  background-color: rgba(0, 0, 0, 0.8);
-  border-radius: 10px;
-  z-index: 1000;
-  opacity: 0;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 5px;
   transition: opacity 0.5s ease;
 }
 
-/* Success message styling */
-#popup-message.success {
-  background-color: var(--smoky-black); /* Black background for success */
+/* Success style */
+#my-form-status.success {
+  color: var(--orange-yellow-crayola); /* yellow text */
+  background-color: var(--smoky-black); /* Black background */
 }
 
-/* Error message styling */
-#popup-message.error {
-  background-color: var(--smoky-black); /* Black background for error */
+/* Error style */
+#my-form-status.error {
+  color: #ff3333; /* Red text */
+  background-color: var(--smoky-black); /* Black background */
 }
