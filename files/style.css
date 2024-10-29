@@ -1898,11 +1898,11 @@ textarea.form-input::-webkit-resizer { display: none; }
 /* Success style */
 #my-form-status.success {
   color: var(--orange-yellow-crayola); /* yellow text */
-  background-color: var(--smoky-black); /* Black background */
+  background-color: var(--white-2); /* White background */
 }
 
 /* Error style */
 #my-form-status.error {
   color: #ff3333; /* Red text */
-  background-color: var(--smoky-black); /* Black background */
+  background-color: var(--white-2); /* White background */
 }
