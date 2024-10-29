@@ -137,8 +137,8 @@ async function handleSubmit(event) {
     }
   }).then(response => {
     if (response.ok) {
-      status.innerHTML = "Hooray! Email Sent!";
-      status.classList.add("success"); // Apply success style
+      status.innerHTML = "Email Sent. Thanks!";
+      status.classList.add("success");
       form.reset();
     } else {
       response.json().then(data => {
@@ -147,20 +147,20 @@ async function handleSubmit(event) {
         } else {
           status.innerHTML = "Oops! Email not sent!";
         }
-        status.classList.add("error"); // Apply error style
+        status.classList.add("error");
       });
     }
     setTimeout(() => {
       status.innerHTML = ""; // Clear message after 5 seconds
-      status.classList.remove("success", "error"); // Remove styles
+      status.classList.remove("success", "error");
     }, 5000); // 5000 milliseconds = 5 seconds
   }).catch(error => {
-    status.innerHTML = "Oops! There was a problem submitting your form";
-    status.classList.add("error"); // Apply error style
+    status.innerHTML = "Oops! Email not sent";
+    status.classList.add("error");
 
     setTimeout(() => {
       status.innerHTML = ""; // Clear message after 5 seconds
-      status.classList.remove("success", "error"); // Remove styles
+      status.classList.remove("success", "error");
     }, 5000);
   });
 }
