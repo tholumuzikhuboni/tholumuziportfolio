@@ -1897,7 +1897,7 @@ textarea.form-input::-webkit-resizer { display: none; }
 
 /* Success style */
 #my-form-status.success {
-  color: var(--orange-yellow-crayola); /* yellow text */
+  color: var(--smoky-black); /* black text */
   background-color: var(--white-2); /* White background */
 }
 
