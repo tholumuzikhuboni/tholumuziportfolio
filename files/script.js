@@ -12,7 +12,7 @@ sidebarBtn.addEventListener("click", function () { elementToggleFunc(sidebar); }
 
 // typed animation 
 var typed = new Typed('.title', {
-  strings: ['Cybersecurity Analyst', 'Front-End Developer','Back-End Developer','UX Designer'],
+  strings: ['Front-end Engineer', 'Security Engineer','Python Developer'],
   loop: true,
   typeSpeed: 200,
   backSpeed:100 ,  
