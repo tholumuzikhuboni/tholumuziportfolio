@@ -1,10 +1,8 @@
-# Tholumuzi Portfolio
+# Portfolio
 ## Preview
 
 ![Tholumuzi Khuboni](./images/portfolio-preview.png)
 Welcome to my personal portfolio website! Here, you can explore my journey as a **Front-End Developer** and **Cybersecurity Analyst**. This website serves as a showcase of my projects, skills, and experience, blending the worlds of web development and digital security.
-
-**Website URL**: [tholumuzi.co.za](https://tholumuzi.co.za)
 
 ## Overview
 
